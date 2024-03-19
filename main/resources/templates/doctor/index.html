@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags-->
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="au theme template">
+<meta name="author" content="Hau Nguyen">
+<meta name="keywords" content="au theme template">
+
+<!-- Title Page-->
+<title>Doctor Dashboard</title>
+
+<!-- Fontfaces CSS-->
+<link href="../doctor/css/font-face.css" rel="stylesheet" media="all">
+<link href="../doctor/vendor/font-awesome-4.7/css/font-awesome.min.css"
+	rel="stylesheet" media="all">
+<link href="../doctor/vendor/font-awesome-5/css/fontawesome-all.min.css"
+	rel="stylesheet" media="all">
+<link
+	href="../doctor/vendor/mdi-font/css/material-design-iconic-font.min.css"
+	rel="stylesheet" media="all">
+
+<!-- Bootstrap CSS-->
+<link href="../doctor/vendor/bootstrap-4.1/bootstrap.min.css"
+	rel="stylesheet" media="all">
+
+<!-- Vendor CSS-->
+<link href="../doctor/vendor/animsition/animsition.min.css"
+	rel="stylesheet" media="all">
+<link
+	href="../doctor/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
+	rel="stylesheet" media="all">
+<link href="../doctor/vendor/wow/animate.css" rel="stylesheet"
+	media="all">
+<link href="../doctor/vendor/css-hamburgers/hamburgers.min.css"
+	rel="stylesheet" media="all">
+<link href="../doctor/vendor/slick/slick.css" rel="stylesheet"
+	media="all">
+<link href="../doctor/vendor/select2/select2.min.css" rel="stylesheet"
+	media="all">
+<link href="../doctor/vendor/perfect-scrollbar/perfect-scrollbar.css"
+	rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="../doctor/css/theme.css" rel="stylesheet" media="all">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+
+</head>
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- HEADER MOBILE-->
+		<header class="header-mobile d-block d-lg-none">
+			<div class="header-mobile__bar">
+				<div class="container-fluid">
+					<div class="header-mobile-inner">
+						<a class="logo" th:href="@{/doctor/index}"> <i
+							class="flaticon-pharmacy"></i> <img
+							src="../doctor/images/icon/doctor.png" alt="CoolAdmin" />
+						</a>
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box"> <span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar-mobile">
+				<div class="container-fluid">
+					<ul class="navbar-mobile__list list-unstyled">
+
+
+						<li><a th:href="@{/doctor/index}"> <i
+								class="fas fa-table"></i>Appointments
+						</a></li>
+
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- END HEADER MOBILE-->
+
+		<!-- MENU SIDEBAR-->
+		<aside class="menu-sidebar d-none d-lg-block">
+			<div class="logo">
+				<a th:href="@{/doctor/index}"> <img
+					src="../doctor/images/icon/logo.png" alt="Doctor+" />
+				</a>
+			</div>
+			<div class="menu-sidebar__content js-scrollbar1">
+				<nav class="navbar-sidebar">
+					<ul class="list-unstyled navbar__list">
+
+
+						<li class="active"><a th:href="@{/doctor/index}"> <i
+								class="fas fa-table"></i>Appointments
+						</a></li>
+
+
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<!-- END MENU SIDEBAR-->
+
+		<!-- PAGE CONTAINER-->
+		<div class="page-container">
+			<!-- HEADER DESKTOP-->
+			<header class="header-desktop">
+				<div class="section__content section__content--p30">
+					<div class="container-fluid">
+						<div class="header-wrap">
+							<form class="form-header" action="" method="POST"></form>
+							<div class="header-button">
+								<div class="noti-wrap">
+									<div class="noti__item js-item-menu"></div>
+									<div class="noti__item js-item-menu"></div>
+									<div class="noti__item js-item-menu"></div>
+								</div>
+								<div class="account-wrap">
+									<div class="account-item clearfix js-item-menu">
+										<div class="image">
+											<img src="images/doc.jpg" alt="doc" />
+										</div>
+										<div class="content">
+											<a class="js-acc-btn" href="#">
+												<p th:text="${name}">Test</p>
+											</a>
+										</div>
+										<div class="account-dropdown js-dropdown">
+											<div class="info clearfix">
+												<div class="image">
+													<a href="#"> <img src="images/doc.jpg" alt="John Doe" />
+													</a>
+												</div>
+												<div class="content">
+													<h5 class="name">
+														<p th:text="${user}">test</p>
+
+													</h5>
+													<span class="email">
+														<p th:text="${email}" />
+													</span>
+												</div>
+											</div>
+
+											<div class="account-dropdown__footer">
+
+
+												<form th:action="@{/logout}" method="POST">
+													<button type="submit"
+														class="btn btn-successbtn btn-lg btn-success">Logout
+													</button>
+												</form>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- END HEADER DESKTOP-->
+
+			<!-- MAIN CONTENT-->
+			<div class="main-content">
+				<div class="section__content section__content--p30">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-9"></div>
+							<div class="col-lg-3"></div>
+						</div>
+
+						<!-- TOP CAMPAIGN-->
+
+						<!--  END TOP CAMPAIGN-->
+					</div>
+				</div>
+				<meta name="_csrf" th:content="${_csrf.token}" />
+
+				<div class="row m-t-30">
+					<div class="col-md-12">
+						<!-- DATA TABLE-->
+						<div class="table-responsive m-b-40">
+							<table class="table table-borderless table-data3">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Serial NO.</th>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Time</th>
+										<th>Description</th>
+										<th>Visiting Status</th>
+										<th>Prescribed Status</th>
+										<th>Action</th>
+									</tr>
+
+								</thead>
+
+								<tbody>
+									<tr th:each="temp : ${app}">
+
+
+										<td th:text="${temp.id}" />
+										<td th:text="${temp.serialNo}" />
+										<td th:text="${temp.name}" />
+										<td th:text="${temp.email}" />
+										<td th:text="${temp.time}" />
+										<td th:text="${temp.description}" />
+
+										<td th:if="${temp.visiting}">Visited</td>
+										<td th:if="${not temp.visiting}">Not Visited</td>
+										<td th:if="${temp.prescribed}">prescribed</td>
+										<td th:if="${not temp.prescribed}">Not prescribed</td>
+
+										<td>
+											<button type="button" class="btn btn-info" id="visitLink"
+												th:if="${temp.visiting eq false}"
+												th:data-parameter1="${temp.id}"
+												th:onclick="handleVisitClick(this.getAttribute('data-parameter1'))">Visit
+											</button>
+
+											<button type="button" class="btn btn-warning"
+												data-bs-toggle="modal" data-bs-target="#exampleModal">
+												Prescription</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- END DATA TABLE-->
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyright">
+							<p>E-Appointment - 2023</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1"
+					aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">
+									Prescription for Appointment ID: <span id="modalAppointmentId"></span>
+								</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<!--                            <meta name="_csrf" th:content="${_csrf.token}"/>-->
+								<div class="form-group">
+									<label for="appointment_name" class="text-black">Name</label> <input
+										type="text" class="form-control" id="modalAppointmentName"
+										disabled>
+								</div>
+								<div class="form-group">
+									<label for="appointment_email" class="text-black">Email</label>
+									<input type="text" class="form-control"
+										id="modalAppointmentEmail" disabled>
+								</div>
+								<div class="form-group">
+									<label for="appointment_problem" class="text-black">Problem</label>
+									<input type="text" class="form-control"
+										id="modalAppointmentProblem" disabled>
+								</div>
+								<div class="form-group">
+									<label for="appointment_email" class="text-black">Prescription</label>
+									<textarea id="appointment_message" class="form-control"></textarea>
+								</div>
+								<!-- Add more fields here as needed -->
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary"
+									onclick="saveChanges()">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script>
+
+                function handleVisitClick(id) {
+                    alert("Do you want to start?");
+                    const csrfToken = document.querySelector('meta[name="_csrf"]').content;
+
+                    const formData = new FormData();
+                    formData.append('app_id', id);
+
+                    fetch('/doctor/visit', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': csrfToken
+                        },
+                        body: formData
+                       })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    response.json();
+                    })
+                    .then(data => {
+                        console.log('Success:', data);
+                        window.location.reload();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+
+                function saveChanges() {
+
+                    const csrfToken = document.querySelector('meta[name="_csrf"]').content;
+
+                        console.log(csrfToken);
+
+
+                    const appointmentId = document.getElementById('modalAppointmentId').textContent.trim();
+                    const prescription = document.getElementById('appointment_message').value;
+                    const email = document.getElementById('modalAppointmentEmail').value;
+
+                    const formData = new FormData();
+                    formData.append('appointmentId', appointmentId);
+                    formData.append('prescription', prescription);
+                    formData.append('email', email);
+
+                    fetch('/doctor/prescribe', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': csrfToken,
+                        },
+                        body: formData,
+                    })
+
+                    .then(response => {
+                        console.log(response)
+                        response.json();
+                    })
+                    .then(data => {
+                         window.location.reload();
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+                }
+
+
+                // JavaScript to populate modal content when Prescription button is clicked
+                document.querySelectorAll('.btn-warning').forEach(function (button) {
+                    button.addEventListener('click', function (event) {
+                        const appointmentRow = event.target.closest('tr');
+                        const appointmentId = appointmentRow.querySelector('td:nth-child(1)').textContent.trim();
+                        const appointmentName = appointmentRow.querySelector('td:nth-child(3)').textContent.trim();
+                        const appointmentEmail = appointmentRow.querySelector('td:nth-child(4)').textContent.trim();
+                        const appointmentProblem = appointmentRow.querySelector('td:nth-child(6)').textContent.trim();
+
+
+                        // Populate modal with appointment data
+                        document.getElementById('modalAppointmentId').textContent = appointmentId;
+                        document.getElementById('modalAppointmentName').value = appointmentName;
+                        document.getElementById('modalAppointmentEmail').value = appointmentEmail;
+                        document.getElementById('modalAppointmentProblem').value = appointmentProblem;
+                        // Add more lines to populate additional fields
+
+                        // Show the modal
+                        const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                        modal.show();
+                    });
+                });
+
+                // Close the modal when the "Close" button inside the modal is clicked
+                document.querySelector('.modal-footer .btn-secondary').addEventListener('click', function () {
+                    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+                    const shadow = document.getElementsByClassName('modal-backdrop fade show')[0];
+                    //console.log(shadow);
+                    //shadow.classList.remove('modal-backdrop');
+                    location.reload();
+
+                    modal.hide();
+                });
+            </script>
+
+				<!-- Jquery JS-->
+				<script src="../doctor/vendor/jquery-3.2.1.min.js"></script>
+				<!-- Bootstrap JS-->
+				<script src="../doctor/vendor/bootstrap-4.1/popper.min.js"></script>
+				<script src="../doctor/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+				<!-- Vendor JS       -->
+				<script src="../doctor/vendor/slick/slick.min.js">
+            </script>
+				<script src="../doctor/vendor/wow/wow.min.js"></script>
+				<script src="../doctor/vendor/animsition/animsition.min.js"></script>
+				<script
+					src="../doctor/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+            </script>
+				<script src="../doctor/vendor/counter-up/jquery.waypoints.min.js"></script>
+				<script src="../doctor/vendor/counter-up/jquery.counterup.min.js">
+            </script>
+				<script
+					src="../doctor/vendor/circle-progress/circle-progress.min.js"></script>
+				<script
+					src="../doctor/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+				<script src="../doctor/vendor/chartjs/Chart.bundle.min.js"></script>
+				<script src="../doctor/vendor/select2/select2.min.js">
+            </script>
+
+				<!-- Main JS-->
+				<script src="../doctor/js/main.js"></script>
+</body>
+
+</html>
+<!-- end document-->

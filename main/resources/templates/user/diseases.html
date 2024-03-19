@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>E-Appointment</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+	rel="stylesheet">
+
+<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="../css/animate.css">
+
+<link rel="stylesheet" href="../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+<link rel="stylesheet" href="../css/magnific-popup.css">
+
+<link rel="stylesheet" href="../css/aos.css">
+
+<link rel="stylesheet" href="../css/ionicons.min.css">
+
+<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+<link rel="stylesheet" href="../css/flaticon.css">
+<link rel="stylesheet" href="../css/icomoon.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.myDiv {
+	border: 2px outset gray;
+	background-color: lightblue;
+	text-align: center;
+	margin: 10px;
+	text-color: black;
+}
+</style>
+</head>
+
+<body>
+
+	<nav
+		class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+		id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" th:href="@{/user/index}"><i
+				class="flaticon-pharmacy"></i><span>E</span> - MEDICAL</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a th:href="@{/user/index}"
+						class="nav-link">Home</a></li>
+
+					<li class="nav-item"><a th:href="@{/user/doctor}"
+						class="nav-link">Doctors</a></li>
+					<li class="nav-item"><a th:href="@{/user/diseases}"
+						class="nav-link">Identify Diseases</a></li>
+					<li class="nav-item"><a th:href="@{/user/appointments}"
+						class="nav-link">Your Appointment</a></li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item cta"><a class="nav-link"
+						data-toggle="modal" data-target="#modalAppointment"><span>Make
+								an Appointment</span></a></li>
+
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item cta">
+						<form th:action="@{/logout}" method="POST">
+							<button type="submit" class="btn btn-danger">Logout</button>
+						</form>
+					</li>
+				</ul>
+
+
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
+
+
+
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Respiratory Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Coughing, shortness of breath, wheezing, chest pain or tightness.
+					<h6>
+						<h6>Specialists: Pulmonologist (lung specialist).</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Cardiovascular Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Chest pain, shortness of breath, palpitations, dizziness, fainting.
+					<h6>
+						<h6>Specialists: Cardiologist (heart specialist).</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Gastrointestinal Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Abdominal pain, bloating, diarrhea, constipation, heartburn.
+					<h6>
+						<h6>Specialists: Gastroenterologist.</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Neurological Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Headaches, dizziness, numbness or weakness, seizures, memory loss.
+					<h6>
+						<h6>Specialists: Neurologist.</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Musculoskeletal Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Joint pain, muscle weakness, stiffness, swelling, limited range of
+					motion.
+					<h6>
+						<h6>Specialists: Orthopedist or Rheumatologist.</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Dermatological Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Skin rashes, itching, dryness, lesions, discoloration.
+					<h6>
+						<h6>Specialists: Dermatologist.</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Endocrine Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Fatigue, weight changes, excessive thirst or urination, heat or
+					cold intolerance.
+					<h6>
+						<h6>Specialists: Endocrinologist.</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Psychological/Behavioral Problems:</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Mood swings, anxiety, depression, sleep disturbances, cognitive
+					changes.
+					<h6>
+						<h6>Specialists: Psychiatrist or Psychologist.</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Reproductive Health Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Irregular menstruation, pelvic pain, erectile dysfunction,
+					infertility.
+					<h6>
+						<h6>Specialists: Gynecologist (for women) or Urologist (for
+							men).</h6>
+		</div>
+
+	</div>
+	<div class="container">
+
+		<div class="myDiv">
+			<h3>Ophthalmological Problems</h3>
+			<h4>
+				Symptoms:
+				</h3>
+				<h6>
+					Blurred vision, eye pain, redness, discharge, floaters.
+					<h6>
+						<h6>Specialists: Ophthalmologist.</h6>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer class="ftco-footer ftco-bg-dark ftco-section img"
+		style="background-image: url(images/bg5.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">E-Appointment</h2>
+						<p>We value our patients' safety and so we follow high
+							standards of medical and surgical protocols. Just give us a call
+							and consult the best neurologist in Bangladesh.</p>
+						<ul
+							class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+							<li class="ftco-animate"><a href="#"><span
+									class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span
+									class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span
+									class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-5">
+						<h2 class="ftco-heading-2">Information</h2>
+						<ul class="list-unstyled">
+							<li><a href="#" class="py-2 d-block">Appointments</a></li>
+							<li><a href="#" class="py-2 d-block">Our Specialties</a></li>
+							<li><a href="#" class="py-2 d-block">Why Choose us</a></li>
+							<li><a href="#" class="py-2 d-block">Our Services</a></li>
+							<li><a href="#" class="py-2 d-block">health Tips</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Site Links</h2>
+						<ul class="list-unstyled">
+							<li><a href="#" class="py-2 d-block">Home</a></li>
+							<li><a href="#" class="py-2 d-block">About</a></li>
+							<li><a href="#" class="py-2 d-block">Departments</a></li>
+							<li><a href="#" class="py-2 d-block">Doctors</a></li>
+							<li><a href="#" class="py-2 d-block">Blog</a></li>
+							<li><a href="#" class="py-2 d-block">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon icon-map-marker"></span><span
+									class="text">Kornokathi, Barishal-8254, Bangladesh</span></li>
+								<li><a href="#"><span class="icon icon-phone"></span><span
+										class="text">0431-2177771-77. </span></a></li>
+								<li><a href="#"><span class="icon icon-envelope"></span><span
+										class="text">registrar@bu.ac.bd</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						E-Appointment
+						<script>document.write(new Date().getFullYear());</script>
+						<i class="icon-heart" aria-hidden="true"></i> by <a
+							href="https://colorlib.com" target="_blank">E-Appointment</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+-->
+	<!-- Modal -->
+	<div class="modal fade" id="modalAppointment" tabindex="-1"
+		role="dialog" aria-labelledby="modalAppointmentLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalAppointmentLabel">Appointment</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<form th:action="@{/user/save-app}" th:object="${app}"
+						method="POST" id="appointmentForm">
+
+						<div class="form-group">
+							<label for="appointment_name" class="text-black">Full
+								Name</label> <input type="text" th:field="*{name}" class="form-control"
+								id="appointment_name">
+						</div>
+
+						<div class="form-group">
+							<label for="appointment_email" class="text-black">Email</label> <input
+								type="text" th:field="*{email}" class="form-control"
+								id="appointment_email">
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="appointment_date" class="text-black">Date</label> <input
+										type="text" th:field="*{date}" class="form-control"
+										id="appointment_date" required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="appointment_time" class="text-black">Time</label> <input
+										type="text" th:field="*{time}" class="form-control"
+										id="appointment_time" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="appointment_doctor" class="text-black">Select
+								Doctor</label> <select class="form-select"
+								aria-label="Default select example" name="doctorId">
+								<option th:each="doctor : ${doctors}" th:value="${doctor.id}"
+									th:text="${doctor.firstName} + ' '+ ${doctor.lastName}"></option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="appointment_message" class="text-black">Message</label>
+							<textarea th:field="*{description}" id="appointment_message"
+								class="form-control" cols="30" rows="10" required></textarea>
+						</div>
+
+						<div class="form-group">
+							<input type="submit" value="Confirm Appointment"
+								class="btn btn-primary">
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- Success SMS Modal -->
+	<div class="modal fade" id="successSMSModal" tabindex="-1"
+		role="dialog" aria-labelledby="successSMSModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="successSMSModalLabel">Success</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Appointment form submitted successfully! Please check your
+						Email for your serial No & further Notification.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Perform form submission via AJAX
+            fetch("/user/save-app", {
+                method: "POST",
+                body: new FormData(document.getElementById("appointmentForm"))
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    $('#modalAppointment').modal('hide'); // Hide the modal
+                    $('#successSMSModal').modal('show'); // Show the SMS success modal
+                    setTimeout(function() {
+                        $('#successSMSModal').modal('hide'); // Hide the SMS success modal after 10 seconds
+                    }, 10000);
+                } else {
+                    console.error("Failed to submit form:", response.statusText);
+                }
+            })
+            .catch(error => {
+                console.error("Failed to submit form:", error);
+            });
+        });
+    });
+</script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/jquery.timepicker.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
